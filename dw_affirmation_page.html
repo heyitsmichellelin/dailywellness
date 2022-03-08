@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Daily Affirmation</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <% import subprocess %>
+        <% output = subprocess.check_output("curl -H \"Accept: application/json\" \"https://www.affirmations.dev\"") %>
+        <% output = str(output) %>
+        index = output.find(':')
+        affirmation = output[index+2:-3]
+        if "\'" in affirmation:
+            affirmation = affirmation.replace("\\'", "'")
+        affirmation = affirmation + '.'
+        print(str(affirmation))
+    </body>
+</html>

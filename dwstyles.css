@@ -1,0 +1,214 @@
+
+* {
+  font-family: 'Eczar', serif; 
+  }
+
+  
+  /* Elements */
+  
+  /* This is an example of a element selector which applies styling to EVERY instance
+   * of this element.
+   */
+  body {
+    background: linear-gradient(
+      90deg, rgba(222, 175, 177) 0%, rgba(220, 196, 142) 100%);
+    height: calc(100vh);
+    width: calc(100vw);
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 50px;
+    align-items: center;
+  }
+
+  textarea {
+    resize: none;
+    height: 200px;
+    width: 520px;
+    background: #ECECEC;
+    border: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    color: #5C5C5C;
+    margin-top: 5px;
+
+  }
+  
+  /* IDs */
+  
+  /* This is an example of a id selector where it applies all styling to 
+   * the ONE (emphasis on the one) element.
+   */
+
+  
+  /* Classes */
+  /* This is an example of a class selector where it applies all styling to 
+   * MULTIPLE elements which use this class name.
+   */
+  .card {
+    background: white;
+    text-align: center;
+    padding: 16px 16px;
+    border-radius: 5px;
+    box-shadow: 0px 12px 8px rgb(0 0 0 / 38%);
+    width: 550px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    position: relative;
+    align-content: center;
+    font-family: 'Varela Round', sans-serif;
+  }
+
+  .name {
+    text-align: center;
+    font-size: 50px;
+    color: #ce7f4b;
+    text-shadow: #5C5C5C;
+    padding: 0px;
+  }
+
+  .smile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*
+   * This is an example of selecting all h1 elements in the .card class
+   * and applies styling to ONLY those h1s. This selector takes more precedence 
+   * than any element selectors before.
+   */
+  .card h1 {
+    font-size: 60px;
+    margin: 10px;
+    color: #ce7f4b;
+  }
+  
+  .card__form__label {
+    text-align: left;
+    font-size: 24px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+    color: #5C5C5C;
+  }
+  
+  .card__form__textbox {
+    
+    background: #ECECEC;
+    border: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    height: 100px;
+    margin: 0 0 20px;
+    padding: 5px;
+    color: #5C5C5C;
+  }
+  
+  .card__form__textbox:hover {
+    border: 1px solid #c4c4c4;
+  }
+  
+  .card__form__textbox:active {
+    border: 1px solid black;
+  }
+  
+  .card__form__submit {
+    background: #83a0cd;
+    border: none;
+    color: #eaeef5;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 15px 22px;
+    margin: 16px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #183a61;
+    align-content: center;
+    align-items: center;
+  }
+  
+  /* This is an example of a pseudo class which allow you to add styling to different states
+   * of an element. The example below is a state when the element is hovered on by the mouse.
+   */
+  .card__form__submit:hover {
+    background: #5f8cd1;
+    align-content: center;
+  }
+  /* 
+   * This is another example of a pseudo class which adds styling to a element that has been
+   * activated --> ex) been clicked on.
+   */
+  .card__form__submit:active {
+    background: #80bec8;
+    align-content: center;
+  }
+  .link-wrapper {
+    margin: 10px;
+  }
+  
+  
+  /* 
+   * This is an example of a media query. It's main purpose is to allow your application
+   * to be responsive to different screen sizes: Desktop, Tabel and mobile
+   *
+   * Use this link to learn more about media queries and how to make your app responsive:
+   */
+  @media (max-width: 575px) {
+    .card {
+      width: 50%;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 7%;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {
+    justify-items: center;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }

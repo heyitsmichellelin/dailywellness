@@ -2,11 +2,11 @@
 <!-- Wrapper for all your elements + represents the root of an HTML document. -->
 <html>
 
-<!-- Ddefine the head portion of the document which contains information related to the document.  -->
+<!-- Define the head portion of the document which contains information related to the document.  -->
 <!-- What to link/preprocess, what the title is and what type of character encoding the file has -->
 <head>
 	<!-- This a title for your website. Titles are displayed in the tab bar at the top of your browser! -->
-	<title>Sign In</title>
+	<title>Daily Wellness</title>
 
 	<!-- World Wide Web's most common character encoding. -->
 	<meta charset="UTF-8" />
@@ -15,15 +15,14 @@
 
 	<!-- Visit Google Fonts: https://fonts.google.com/  -->
 	<!-- To get custom FREE fonts on your website! -->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;700&family=Quicksand:wght@600&family=Varela+Round&display=swap" rel="stylesheet">
 	<!-- Bootstrap -->
 	<!-- Import precreated styles with Bootstrap! View documentation here: https://getbootstrap.com/docs/5.1/getting-started/introduction/ -->
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
 
 	<!-- Style sheet -->
 	<!-- this link tag links your HTML file to a stylesheet (.css file) to make your site look pretty :) -->
-	<link rel="stylesheet" href="src/styles.css">
+	<link rel="stylesheet" href="dwstyles.css">
 </head>
 
 <!-- Where to put all of your content -->
@@ -34,38 +33,93 @@
 	<!-- > ID attributes have unique names and can only be used by ONE element. -->
 	<!-- > CLASS attributes can be used by MULTIPLE elements which allows them to be reused everywhere. -->
 
-	<div id="card-container">
+<div class="name">
+	<style>
+		h1 {
+		  text-shadow: 2px 2px #E9D7C3;
+		  margin-top: 30px;
+		  margin-bottom: 20px;
+		}
+		</style>
+	<h1>Daily Wellness</h1>
+</div>
+
+
+<div class="row">
+	<div class="column">
 		<div class="card">
-			<!-- Element which displays the largest text size of all the other elements. -->
-			<h1>SIGN IN</h1>
+
+			<!--<script>
+				var dtt = new Date();
+				document.getElementById('date-time').innerHTML=dtt;
+			</script>
+
+			<p><span id='date-time'></span>.</p>-->
 
 			<!-- This initiates the creation of a form -->
 			<form id="form" class="card__form">
 
 				<!-- This a label to appear with/next to/or above the input element -->
-				<label class="card__form__label" for="fusername">Username</label>
+				<label class="card__form__label" for="ffeeling">How are you feeling today?</label>
 				<!-- This is an element which takes input from a user. Ex) Clicking, typing, etc. -->
 				<!-- There are A LOT of input types, please checkout: https://www.javatpoint.com/html-form-input-types -->
-				<input id="si_username" class="card__form__textbox" type="textbox" name="fusername">
-				
-				
-				<label class="card__form__label" for="fpassword">Password</label>
-				<input id="si_password" class="card__form__textbox" type="password" name="fpassword">
+				<textarea id="feel" name="feel_box" rows="4" cols="50"></textarea>
 				
 				<!-- This creates a button on the screen which can be interacted with the onClick Event Hander -->
 				<!-- A Event/Function can be created in you linked javascript file. -->
-				<button class="card__form__submit" onclick="verify(event)">SUBMIT</button>
+
 
 
 			</form>
-			<div class="link-wrapper">
-				<a href="sign-up.html">Sign Up</a>
-			</div>
+		</div>
+	  
+		<div class="column">
+		  <div class="card">
+
+			<!--<script>
+				var dt = new Date();
+				document.getElementById('date-time').innerHTML=dt;
+			</script>
+
+			<p><span id='date-time'></span>.</p>-->
+
+			<!-- This initiates the creation of a form -->
+			<form id="form" class="card__form">
+
+				<label class="card__form__label" for="frant">Tell me what's on your mind...</label>
+				<textarea id="think" name="think_box" rows="4" cols="50"></textarea>
+				<!-- This creates a button on the screen which can be interacted with the onClick Event Hander -->
+				<!-- A Event/Function can be created in you linked javascript file. -->
+
+
+			</form>
 		</div>
 	</div>
+</div>
+
+<!--
+<div class="button">
+	<style>
+		.button {
+		display: flex;
+  		justify-content: center;
+		margin-top: 50px;
+		margin-bottom: 0px;
+		padding: 20px;}
+	</style>
+	<button class="card__form__submit" onclick="location.href='https://www.affirmations.dev/'">SUBMIT</button>
+</div>
+-->
+
+<div class="smile">
+	<a href="https://www.affirmations.dev/"><img src="images\smile-modified.png" alt="SUBMIT" style="width:80px;height:80px;"></a>
+</div>
+
+ 
+
 
 	<!-- Similar to the link element, this script tag imports your javascript files to your HTML -->
-	<script src="src/index.js">
+	<script src="src/dw.js">
 	</script>
 </body>
 
